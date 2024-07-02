@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght,BNCE,SPAC@0,300..800,-35,6.9;1,300..800,-35,6.9&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Shantell+Sans:ital,wght,BNCE,SPAC@0,300..800,-35,6.9;1,300..800,-35,6.9&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #747265;
+}
+
+/* My Shadow class */
+.myshadow {
+  -webkit-box-shadow: 3px 3px 15px 1px rgba(186, 31, 17, 0.73);
+  box-shadow: 3px 3px 15px 1px rgba(186, 31, 17, 0.73);
+}
+
+.firstheading {
+  color: #ebeded;
+  font-size: 36px;
+  font-family: "Shantell Sans", cursive;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: rgb(248, 150, 150);
+  text-shadow: 4px 4px 17px rgba(255, 16, 16, 0.75),
+    4px 4px 17px rgba(255, 16, 16, 0.75);
+  /* text-shadow: 5px 5px 8px rgba(186, 31, 17, 0.73); */
+}
+
+/*  */
+
+.container {
+  margin: 3em;
+  border: 7px solid #3b3631;
+}
+.section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1px auto;
+  width: 100%;
+  margin: auto auto;
+}
+
+.section img {
+  border: 3px dashed black;
+}
+
+.article {
+  /* width: 80%; */
+  margin: 40px 0 100px 0;
+}
+.article p {
+  margin: 0 80px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  text-align: justify;
+  word-spacing: 4px;
+  letter-spacing: 4px;
+  line-height: 40px;
+}
+.smooth-text {
+  color: white;
+  font-size: 32px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+}
+.smooth-text2 {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: white;
+  font-size: 32px;
+  font-family: "Titillium Web", sans-serif;
+  text-shadow: 4px 4px 36px rgba(255, 16, 16, 0.75);
+}
+
+/**/
+/* Section 2  */
+/**/
+
+.secondheading {
+  color: #7b1212;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin: 45px 10px -20px 10px;
+  text-shadow: 4px 4px 11px rgba(245, 244, 244, 0.945);
+  
+}
+.last-span{
+  color: #7b1212;
+  text-decoration: line-through;
+  text-decoration-color: black;
+}
+

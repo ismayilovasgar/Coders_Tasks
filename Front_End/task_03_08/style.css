@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+:root {
+  --text-shdow: 2px 0px 10px rgb(236, 229, 229);
+  --color-default: #434240;
+  --color-bg: #e2cba9;
+  --text-a-links: 0px 4px 15px black;
+}
+
+/** Header - page */
+.navbar {
+  position: fixed;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #887358;
+  padding: 0 100px;
+  margin: 0 auto;
+  height: 15vh;
+  width: 100%;
+  z-index: 5;
+}
+
+.navbar img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar .nav-logo-left {
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar .nav-logo-left p {
+  font-family: "Oleo Script", system-ui;
+  color: rgb(224, 203, 171);
+  font-size: 21px;
+  position: absolute;
+  bottom: 5px;
+  text-shadow: 0px 4px 15px black;
+}
+
+.navbar .nav-logo-left p:hover {
+  text-shadow: var(--text-shdow);
+}
+
+.navbar .nav-logo-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  height: 100%;
+}
+
+.navbar .nav-logo-right .content {
+  width: 100%;
+  background-color: var(--color-bg);
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.navbar .nav-logo-right .content i {
+  color: var(--color-default);
+  font-size: 30px;
+}
+
+.navbar .nav-logo-right .content:hover i {
+  color: var(--color-bg);
+}
+
+.navbar .nav-logo-right .content:hover {
+  background-color: var(--color-default);
+  cursor: pointer;
+}
+
+.navbar .nav-logo-right img {
+  position: absolute;
+  width: 140px;
+  height: 160px;
+  bottom: -130px;
+  left: calc(100% - (95px));
+  z-index: -2;
+}
+
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links ul li {
+  padding: 20px;
+  margin: 5px 20px 5px 0;
+}
+
+.nav-links ul li a {
+  font-size: 28px;
+  color: #e0ccab;
+  font-family: "Dancing Script", cursive;
+  text-shadow: var(--text-a-links);
+}
+
+.nav-links ul li a:hover {
+  text-shadow: 2px 0px 10px rgb(236, 229, 229);
+}
+
+.section-bottom {
+  background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed;  */
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+.section-bottom-content {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  height: 80%;
+  background: linear-gradient(
+    61deg,
+    rgba(0, 0, 0, 0.481) 0%,
+    rgba(1, 1, 1, 0.6699929971988796) 100%
+  );
+}
+.middle-logo {
+  text-align: center;
+  top: 250px;
+  left: 300px;
+  width: 800px;
+  height: 250px;
+  position: absolute;
+  font-size: 30px;
+  font-family: "Oleo Script", system-ui;
+  color: var(--color-bg);
+  /* text-shadow: var(--text-shdow); */
+  z-index: 2;
+}
+
+/** Products - page */
+.products-container {
+  margin: 40px auto 0px;
+  width: 90%;
+  padding: 5px 30px;
+}
+
+.products-container h2 {
+  color: #383735;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Oleo Script", system-ui;
+  text-shadow: 0px 2px 5px black;
+}
+
+.products-container > p {
+  width: 60%;
+  margin: 20px auto 10px;
+  text-align: center;
+  color: #383735;
+  font-size: 24px;
+  font-family: "Oleo Script", system-ui;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px 10px 80px 10px;
+  gap: 30px 20px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+  border: 2px solid #887358;
+  border-radius: 30px;
+}
+.product .icon-image {
+  position: relative;
+  border: none;
+}
+.product .icon-image i {
+  background-color: #e0ccab;
+  border-radius: 50%;
+  color: #383735;
+  cursor: pointer;
+  padding: 20px 15px;
+  position: absolute;
+  top: 12%;
+  right: 8%;
+  box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.8), 0 8px 10px 0 rgba(0, 0, 0, 0.78);
+}
+
+.product .icon-image i:hover {
+  color: coral;
+  box-shadow: 0 8px 5px 0 rgba(230, 77, 31, 0.8),
+    0 8px 10px 0 rgba(0, 0, 0, 0.78);
+}
+
+.product .icon-image img {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+
+.product > p {
+  font-family: "Poppins",  sans-serif;
+  text-align: center;
+  font-size: 22px;
+  margin: 15px 0 0 0;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+
+.buy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+.buy > p {
+  font-weight: bold;
+  font-family: "Poppins",  sans-serif;
+  font-size: 20px;
+}
+
+.buy > button {
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: #383735;
+  color: #e0cba9;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+.buy button:hover {
+  background-color: rgb(224, 203, 171);
+  color: #383735;
+}
+
+/** Section-middle */
+.section-middle {
+  background-image: url("https://images.unsplash.com/photo-1533779283484-8ad4940aa3a8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  text-align: center;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 60px;
+  position: relative;
+}
+
+.section-middle h2 {
+  width: 60%;
+  padding: 10px;
+  margin: 20px auto;
+  font-size: 40px;
+  color: #ddc396;
+  font-family: "Oleo Script", system-ui;
+  letter-spacing: 5px;
+  z-index: 2;
+}
+
+.section-middle p {
+  color: #dfccab;
+  font-family: "Oleo Script", system-ui;
+  padding: 20px 60px;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px rgb(201, 130, 59);
+}
+
+.section-middle-bg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    61deg,
+    rgba(0, 0, 0, 0.481) 0%,
+    rgba(1, 1, 1, 0.6699929971988796) 100%
+  );
+}
+
+/** Section - footer */
+.section-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5%;
+  padding: 22% 10% 12% 10%;
+  height: 90vh;
+}
+
+.section-footer-about {
+  position: relative;
+  z-index: 2;
+  width: 48%;
+  height: 507px;
+}
+
+.section-footer-about h2 {
+  font-family: "Oleo Script", system-ui;
+  font-size: 52px;
+  letter-spacing: 10px;
+  color: #383735;
+  padding: 5px 0 20px 0;
+}
+
+.section-footer .section-footer-about .left-icon {
+  position: absolute;
+  width: 140px;
+  height: 120px;
+  top: 53px;
+  left: -47px;
+  z-index: -4;
+}
+
+.section-footer .section-footer-about .right-icon {
+  position: absolute;
+  width: 80px;
+  height: 90px;
+  top: 53px;
+  left: 123px;
+  top: 53px;
+  z-index: -4;
+}
+
+.section-footer-about p {
+  color: #373f4b;
+  font-size: 17px;
+  font-family: "Oleo Script", system-ui;
+  word-spacing: 2px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.section-footer .section-footer-image {
+  position: relative;
+  width: 47%;
+  margin: 0 0 40px 0;
+}
+
+.section-footer .section-footer-image img {
+  width: 100%;
+  height: 450px;
+}
+
+.section-footer .section-footer-image i {
+  position: absolute;
+  font-size: 40px;
+  z-index: 2;
+  color: rgb(202, 198, 190);
+  top: 50%;
+  text-shadow: 2px 2px 2px black;
+}
+
+.section-footer .section-footer-image i:first-of-type {
+  left: 20px;
+}
+.section-footer .section-footer-image i:nth-of-type(2) {
+  right: 20px;
+}
+
+.section-footer .section-footer-image i:hover {
+  text-shadow: var(--text-shdow);
+  cursor: pointer;
+}

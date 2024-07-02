@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Əsgər_İsmayılov_task_03_02</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            background-color: #35384B;
+        }
+
+        #color-box1 {
+            width: 100vw;
+            height: 8vh;
+            background-color: #282828;
+        }
+
+        #color-box2 {
+            width: 100vw;
+            height: 4vh;
+            background-color: #3C3C3B;
+        }
+
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        thead,
+        tfoot {
+            text-align: center;
+            background-color: #B7E5B4;
+        }
+
+        tbody>tr>td:first-child:not(.tel) {
+            font-weight: bold;
+            background-color: #B7E5B4;
+        }
+
+        tbody>tr>td:nth-child(2) {
+            background-color: #B5C1D1;
+        }
+
+        .tel {
+            font-weight: bold;
+            background-color: #CCD3CB;
+        }
+
+        th,
+        td {
+            padding: 10px 15px;
+            border: 2px solid black;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        select {
+            padding: 4px 1px;
+        }
+
+        select:nth-child(2) {
+            width: 40px;
+        }
+
+        hr {
+            border: 1px solid #B7E5B4;
+        }
+
+        iframe {
+            display: block;
+            border: 1px solid #B5C1D1;
+            margin: 10px auto 30px auto;
+        }
+
+        .checkbox-round {
+            width: 1.3em;
+            height: 1.3em;
+            background-color: white;
+            border-radius: 50%;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+            appearance: none;
+            -webkit-appearance: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .checkbox-round:checked {
+            background-color: rgb(57, 211, 95);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="color-box1"></div>
+    <div id="color-box2"></div>
+    <form action="#" method="post">
+        <table cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th colspan="3">Müraciət et </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><label for="file">Şəkil yükləyin</label></td>
+                    <td colspan="2" style="padding-left: 80px;">
+                        <input type="file" name="file" id="file" multiple>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="name">Ad</label></td>
+                    <td colspan="2"><input onkeydown="return /[a-z]/i.test(event.key)" type="text" name="name" id="name"
+                            placeholder="Ad"></td>
+                </tr>
+                <tr>
+                    <td><label for="surname">Soyad</label></td>
+                    <td colspan="2"><input onkeydown="return /[a-z]/i.test(event.key)" type="text" name="surname"
+                            id="surname" placeholder="Soyad"></td>
+                </tr>
+                <tr>
+                    <td><label for="birthdate">Doğum tarixi</label></td>
+                    <td colspan="2"><input type="date" name="birthdate" id="birthdate" style="
+                    width: 177px;"></td>
+                </tr>
+                <tr>
+                    <td>Cinsiyyət</td>
+                    <td colspan="2">
+                        <label for="male"> kişi</label>
+                        <input type="radio" name="gender" id="male" style="margin-right: 55px;">
+
+                        <label for="female"> qadın</label>
+                        <input type="radio" name="gender" id="female">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td colspan="2"><input type="email" name="email" id="email" placeholder="Emailinizi yazın"></td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Əlaqə</td>
+                </tr>
+                <tr>
+                    <td class="tel"><label for="tel1">tel:</label></td>
+                    <td><input type="tel" name="tel1" id="tel1" placeholder="phone"></td>
+                </tr>
+                <tr>
+                    <td class="tel"><label for="tel2">tel:</label></td>
+                    <td><input type="tel" name="tel2" id="tel2" placeholder="phone"></td>
+                </tr>
+                <tr>
+                    <td><label for="experience">Təcrübələriniz</label></td>
+                    <td colspan="2">
+                        <textarea id="experience" name="experience" rows="3" cols="40"
+                            placeholder="Təcrübələrinizi qeyd edin..."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Xarici Dillər</td>
+                    <td colspan="2">
+                        <label for="eng"> İngilis dili</label>
+                        <input type="checkbox" name="eng" id="eng" class="checkbox-round">
+
+                        <label for="tur"> Türk dili</label>
+                        <input type="checkbox" name="tur" id="tur" class="checkbox-round">
+
+                        <label for="rus"> Rus dili</label>
+                        <input type="checkbox" name="rusF" id="rus" class="checkbox-round">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Əsgərlik</td>
+                    <td colspan="2">
+                        <select name="military " id="military">
+                            <option value="volvo" selected>Xidmətdə olub</option>
+                            <option value="volvo">Xidmətdə olmayib</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Təhsil</td>
+                    <td colspan="2">
+                        <select name="education " id="education" style="width: 128px;">
+                            <option value="ali" selected>Ali Təhsil </option>
+                            <option value="tamorta">Tam Orta Təhsil</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <!-- <button type="submit">Təsdiq et</button> -->
+                        <input type="submit" value="Təsdiq et">
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+    <hr>
+    <hr>
+
+    <h2 style="margin: 20px auto; text-align: center;">Bizim Haqqimizda</h2>
+
+    <iframe alt="Coders Graduation Day " class="myframe" width="800" height="460"
+        src="https://www.youtube.com/embed/nMgD_X0Cgg8" style="border:0;" allowfullscreen="true"
+        allowpaymentrequest="false" loading="eager">
+    </iframe>
+
+</body>
+
+</html>

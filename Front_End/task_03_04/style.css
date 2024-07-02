@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght,BNCE,SPAC@0,300..800,-35,6.9;1,300..800,-35,6.9&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Shantell+Sans:ital,wght,BNCE,SPAC@0,300..800,-35,6.9;1,300..800,-35,6.9&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #747265;
+}
+
+.container {
+  width: 90vw;
+  margin: 3em auto;
+  border: 7px solid #3b3631;
+}
+
+/* used in other places */
+.myshadow {
+  -webkit-box-shadow: 3px 3px 15px 1px rgba(186, 31, 17, 0.73);
+  box-shadow: 3px 3px 15px 1px rgba(186, 31, 17, 0.73);
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1px auto;
+  width: 100%;
+  margin: auto auto;
+}
+
+.section img {
+  border: 3px dashed #3a3631;
+}
+
+.section p {
+  margin: 5% 7%;
+  font-size: 22px;
+  text-align: justify;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.15em;
+  line-height: 2.4rem;
+}
+
+.article {
+  width: 75%;
+  margin: 2rem auto;
+}
+
+.article p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  text-align: justify;
+  word-spacing: 4px;
+  letter-spacing: 4px;
+  line-height: 32px;
+}
+
+/* section in top  */
+.firstheading {
+  color: #efebed;
+  font-size: 36px;
+  font-family: "Shantell Sans", cursive;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: rgb(245, 102, 102);
+  text-shadow: 4px 4px 47px rgba(255, 16, 16, 0.75),
+    4px 4px 47px rgba(206, 51, 51, 0.75);
+  /* text-shadow: 5px 5px 8px rgba(186, 31, 17, 0.73); */
+}
+
+.section .leonardo {
+  color: white;
+  font-size: 32px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+}
+.section .mytopimg {
+  margin: 2rem auto 1rem;
+  width: 30vw;
+  height: 80vh;
+}
+
+.vitruvis a,
+.lastsupper a,
+.monalisa  a{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: white;
+  font-size: 32px;
+  font-family: "Titillium Web", sans-serif;
+  text-shadow: 4px 4px 15px rgba(255, 16, 16, 0.65);
+}
+
+/* section in bottom  */
+.mybottomimg {
+  width: 60vw;
+  margin: 2rem auto 0.5rem;
+}
+
+.secondheading {
+  color: #7b1212;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin: 2rem auto 0.5rem;
+  text-shadow: 4px 4px 11px rgba(245, 244, 244, 0.945);
+}
+
+.mybottomsection > p {
+  margin: 1.5rem 5rem 4rem 5rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 22px;
+  text-align: justify;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  line-height: 2.5rem;
+}
+.smooth-text {
+  color: white;
+  font-size: 32px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+}
+
+.last-bottom-text {
+  color: #7b1212;
+  text-decoration: line-through;
+  text-decoration-color: black;
+}

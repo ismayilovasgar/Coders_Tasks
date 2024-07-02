@@ -1,0 +1,65 @@
+task1:
+İlk olaraq satışı reallaşmış məhsullar üçün bir cədvəl (tabel) 
+yaradırıq və bu cədvəlimizin sütun olaraq məhsul idsi, sayı və
+dəyəri (1 dənəsinin)  olacaq. Biz isə hər məhsul 
+üçün ümumi olan qazancı gətirib sıralamaq lazımdır
+
+--CREATE TABLE Mehsullar(mehsul_id INTEGER,mehsul_adi VARCHAR2(20),mehsul_sayi INTEGER, mehsul_deyeri INTEGER);
+
+--INSERT INTO Mehsullar VALUES(1,'0.5L Cola',20,1);
+--INSERT INTO Mehsullar VALUES (2,'1L Fanta',25,2);
+--INSERT INTO Mehsullar VALUES(3,'2L Pepsi',34,3);
+
+--SELECT * FROM Mehsullar;
+--SELECT m.*, (m.mehsul_sayi * m.mehsul_deyeri) AS "Qazanc" FROM Mehsullar m;
+
+
+task2:
+işçilər adında cədvəlimiz olacaq. Sütun olaraq ad,maaş,
+departament olacaq. Siz isə departamentinin adı satış olan 
+və maaşı 600-dən çox olan şəxslərin maaşını azalan sıra ilə sıralıyın
+
+--CREATE TABLE Isciler( isci_ad VARCHAR2(20), isci_maas INTEGER, isci_department VARCHAR2(25) );
+
+--INSERT INTO Isciler values('Hesen',700,'Satis');
+--INSERT INTO Isciler values('Eli',1400,'Temir');
+--INSERT INTO Isciler values('Ramal',900,'Muhasib');
+--INSERT INTO Isciler values('Kamal',850,'Anbardar');
+--INSERT INTO Isciler values('Kazim',780,'Satis');
+
+--SELECT * FROM Isciler WHERE isci_department ='Satis' AND isci_maas > 600 ORDER BY isci_maas  DESC;
+
+
+task3:
+kitablar cədvəlimiz olacaq. Sütunları: adı, janrı, nəşr ili .2015-dən sonra nəşr olunmuş 
+kitbaabları janrına görə artan sıra ilə sıralıyın
+
+--CREATE TABLE Kitablar( kitab_ad VARCHAR2(20), kitab_janr VARCHAR2(20), kitab_il INTEGER);
+
+--INSERT INTO Kitablar VALUES('Eli ve Nino','psikoloji',2013);
+--INSERT INTO Kitablar VALUES( 'Cinayet ve Ceza','klassika',2017);
+--INSERT INTO Kitablar VALUES('Donusum','psikoloji',2019);
+--INSERT INTO Kitablar VALUES('Icimizdeki Seytan','psikoloji',2020);
+--INSERT INTO Kitablar VALUES('Qirmizi ve Qara','klassika',2021);
+--INSERT INTO Kitablar VALUES( 'Sefiller','klassika',2012);
+
+
+SELECT kitab_janr, COUNT(kitab_janr) AS "Sayi" FROM Kitablar WHERE kitab_il > 2015 GROUP BY kitab_janr ORDER BY 'Sayi' ;
+
+task4:
+filmlər adlı cədvəlimiz olacaq. Sütunları : ad, çıxış tarixi,
+ratinq. Çıxış tarixi 2000-dən kiçik olanları artan sıra və 
+ratingi 7-dən böyük olanları azalan sıra ilə sıralıyın.
+
+--CREATE TABLE Filmler (film_ad VARCHAR2(30),film_cixis_tarix INTEGER, film_rating FLOAT);
+
+--INSERT INTO Filmler VALUES('The God Of Father',1972, 9.2);
+--INSERT INTO Filmler VALUES('Gece Yolcusu',2014, 6.2);
+--INSERT INTO Filmler VALUES('The Inception',2010, 8.8);
+--INSERT INTO Filmler VALUES('The Dune:Part Two',2024, 8.6);
+--INSERT INTO filmler2 VALUES('The Parasite',2019, 8.5);
+
+-- 
+--SELECT * FROM Filmler WHERE film_cixis_tarix <2000 AND film_rating >7 ORDER BY film_cixis_tarix ASC, film_rating DESC;
+--
+--SELECT film_cixis_tarix , film_rating FROM Filmler WHERE film_cixis_tarix < 2000 AND film_rating > 7  ORDER BY  film_cixis_tarix ASC, film_rating DESC;
